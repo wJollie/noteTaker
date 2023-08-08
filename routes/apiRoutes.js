@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = (app) => {
-  const dbFilePath = path.join(__dirname, "db.json");
+  const dbFilePath = path.join(__dirname, "../db.json");
   // get note
   app.get("/api/notes", (req, res) => {
     const notes = JSON.parse(fs.readFileSync(dbFilePath, "utf8"));
